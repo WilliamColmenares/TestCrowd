@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Add new pet</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input id="owner" name="owner" type="hidden" value="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+        <button class="btn btn-success" type="submit">Add pet</button>
+    </form>
+{% endblock %}
